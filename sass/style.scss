@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700');
+@import url('https://fonts.googleapis.com/css2?family=Futura+PT:wght@300;400;700');
+
+@font-face {
+    font-family: 'Futura';
+    src: url('resources/FuturaPTBook.otf') format("truetype");
+}
+
+$red: #ba392a;
+$dark-red: #E64833;
+$light-red: #c54232;
+$light-blue: #0288d1;
+
+$slightly-dark-grey: #525252;
+$grey-light: #F2F2F2;
+
+.has-text-slightly-dark-grey {
+	color: $slightly-dark-grey !important;
+}
+
+.hero.has-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+$primary: $red;
+$link: $dark-red;
+$info: $light-red;
+$background: $grey-light;
+
+$family-monospace: 'Futura', monospace;
+$family-sans-serif: 'Roboto Slab', sans-serif;
+
+.navbar-item {
+    color: $dark-red;
+    font-family: $family-monospace;
+}
+
+.title.is-2 {
+    color: #081B33;
+}
+
+.content.p {
+    color: #37475A;
+}
+
+.title {
+	font-family: $family-sans-serif;
+}
+
+p {
+    font-family: $family-monospace;
+}
+
+.home-banner {
+    background-image: url("images/home_banner.png");
+}
+
+@import "bulma-0.9.3/bulma.sass";
+
