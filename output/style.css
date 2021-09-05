@@ -87,6 +87,14 @@ hr {
     justify-content: center;
   }
 }
+.news-date {
+  color: #E64833 !important;
+}
+
+.about-image {
+  width: 100%;
+}
+
 /*! bulma.io v0.9.3 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .pagination-previous,

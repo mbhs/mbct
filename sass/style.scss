@@ -104,5 +104,13 @@ hr {
     }
 }
 
+.news-date {
+    color: $dark-red !important;
+}
+
+.about-image {
+    width: 100%;
+}
+
 @import "bulma-0.9.3/bulma.sass";
 
