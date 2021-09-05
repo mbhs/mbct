@@ -9,10 +9,7 @@ if __name__ == "__main__":
     # news context
     news_context = {"posts":posts}
 
-    #site = Site.make_site(contexts=[("news.html",news_context)])
-    site = Site.make_site(env_globals={
-        'posts':posts,
-    },searchpath="templates",outpath="output")
+    site = Site.make_site(contexts=[("news.html",news_context)],searchpath="templates",outpath="output")
 
     # enable automatic reloading
     site.render()
