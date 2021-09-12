@@ -86,6 +86,10 @@ hr {
     flex: 1;
     justify-content: center;
   }
+
+  .navbar-mobile {
+    display: none !important;
+  }
 }
 .news-date {
   color: #E64833 !important;
@@ -5512,7 +5516,7 @@ body.has-spaced-navbar-fixed-bottom {
 
   a.navbar-item.is-active,
 .navbar-link.is-active {
-    color: #0a0a0a;
+    color: #E64833;
   }
   a.navbar-item.is-active:not(:focus):not(:hover),
 .navbar-link.is-active:not(:focus):not(:hover) {

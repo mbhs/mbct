@@ -40,6 +40,8 @@ $background: $grey-light;
 $family-monospace: 'Futura', monospace;
 $family-sans-serif: 'Roboto Slab', sans-serif;
 
+$navbar-item-active-color: $dark-red;
+
 .navbar-item {
     color: $dark-red;
     font-family: $family-monospace;
@@ -101,6 +103,9 @@ hr {
     .navbar-brand {
         flex: 1;
         justify-content: center;
+    }
+    .navbar-mobile {
+        display: none !important;
     }
 }
 
