@@ -93,8 +93,11 @@
         <p class="is-size-5">Find dates and times of our meetings and upcoming competitions here. If you would like to link this to your own personal Google Calendar, click on the “+” button on the lower-right corner of the calendar below.</p>
     </div>
     <div class="container">
-        <div class="iframe-wrapper">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZmpjbjNxY2s4N3N2cm1pNDY2bGI2aGpxNWdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23EF6C00&showPrint=1&showTabs=1&showCalendars=0&showTz=1&showNav=1" style="border:solid 1px #777" frameborder="0" scrolling="no" class="iframe"></iframe>
+        <div class="iframe-wrapper is-hidden-touch">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZmpjbjNxY2s4N3N2cm1pNDY2bGI2aGpxNWdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23EF6C00&showPrint=1&showTabs=1&showCalendars=0&showTz=1&showNav=1" style="border:solid 1px #777" class="iframe"></iframe>
+        </div>
+        <div class="iframe-wrapper is-hidden-desktop">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZmpjbjNxY2s4N3N2cm1pNDY2bGI2aGpxNWdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23EF6C00&showPrint=1&showTabs=0&mode=AGENDA&showCalendars=0&showTz=1&showNav=1" style="border:solid 1px #777" class="iframe"></iframe>
         </div>
     </div>
 </section>
@@ -120,6 +123,6 @@
 					Tuesdays after School | Room 328</p>
 			</div>
 		</footer>
-		<script type="text/javascript" src="nav.js"></script>
+		<script type="text/javascript" src="element_control.js"></script>
 	</body>
 </html>
