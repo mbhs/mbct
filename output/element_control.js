@@ -25,4 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $notification.parentNode.removeChild($notification);
       });
     });
+
+    // load bulma collapsible instances
+    const bulmaCollapsibleInstances = bulmaCollapsible.attach('.is-collapsible');
 });
