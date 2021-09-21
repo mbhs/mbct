@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'Futura';
-    src: url('resources/FuturaPTBook.otf') format("truetype");
+    src: url('fonts/FuturaPTBook.otf') format("truetype");
 }
 
 $red: #ba392a;
@@ -59,7 +59,7 @@ $navbar-item-active-color: $dark-red;
 	font-family: $family-sans-serif;
 }
 
-p {
+p, ul, .is-monospace {
     font-family: $family-monospace;
 }
 
