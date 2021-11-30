@@ -1,0 +1,66 @@
+[
+    {
+        "id":"meeting1",
+        "items":[
+            {
+                "type":"text",
+                "content":"No problems for Meeting #1"
+            }
+        ]
+    },
+    {
+        "id":"meeting2",
+        "items":[
+            {
+                "type":"problem",
+                "url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=572",
+                "name":"Breed Counting"
+            },
+            {
+                "type":"problem",
+                "url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=691",
+                "name":"Hoof, Paper, Scissors"
+            },
+            {
+                "type":"problem",
+                "url":"https://atcoder.jp/contests/abc125/tasks/abc125_c",
+                "name":"GCD on Blackboard"
+            },
+            {
+                "type":"problem",
+                "url":"https://cses.fi/problemset/task/1144",
+                "name":"Salary Queries"
+            },
+            {
+                "type":"problem",
+                "url":"https://cses.fi/problemset/task/1734",
+                "name":"Distinct Values Queries"
+            }
+        ]
+    },
+    {
+        "id":"meeting10",
+        "items":[
+            {
+                "type":"problem",
+                "url":"https://atcoder.jp/contests/dp",
+                "name":"DP Contest (multiple problems)"
+            },
+            {
+                "type":"problem",
+                "url":"https://www.codechef.com/FZBZ21A/problems/LCKALI",
+                "name":"Lucky Ali"
+            },
+            {
+                "type":"problem",
+                "url":"http://usaco.org/index.php?page=viewproblem2&cpid=1114",
+                "name":"Modern Art"
+            },
+            {
+                "type":"problem",
+                "url":"https://atcoder.jp/contests/abc227/tasks/abc227_e",
+                "name":"Swap"
+            }
+        ]
+    }
+]

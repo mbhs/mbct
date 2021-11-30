@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
 {% set active_page = "curriculum" %}
 
+{% macro load_problems(id) -%}
+    {# will be more efficient once the entire curriculum page gen system is improved #}
+    {% for s in meeting_problems %}
+        {% if s['id'] == id %}
+            {% for p in s['items'] %}
+                {% if p['type'] == 'problem' %}
+                    <li><a href="{{ p['url'] }}">{{ p['source'] }}: {{ p['name'] }}</a></li>
+                {% elif p['type'] == 'text' %}
+                    <li>{{ p['content'] }}</li>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{%- endmacro %}
+
 {% block content %}
 <section class="section">
     <div class="container content has-text-centered">
@@ -38,7 +53,7 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            <li>No problems for Meeting #1</li>
+                            {{ load_problems('meeting1') }}
                         </ul>
                     </p>
                 </div>
@@ -64,11 +79,7 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            <li><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=572">Problem 1</a></li>
-                            <li><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=691">Problem 2</a></li>
-                            <li><a href="https://atcoder.jp/contests/abc125/tasks/abc125_c">Problem 3</a></li>
-                            <li><a href="https://cses.fi/problemset/task/1144">Problem 4</a></li>
-                            <li><a href="https://cses.fi/problemset/task/1734">Problem 5</a></li>
+                            {{ load_problems('meeting2') }}
                         </ul>
                     </p>
                 </div>
@@ -250,11 +261,11 @@
         <div class="card">
             <header class="card-header">
                 <p class="card-header-title is-size-5">Meeting #9 - Combinatorics and Number Theory (Guest Lecture!)</p>
-                <a href="#meeting8-card" data-action="collapse" class="card-header-icon is-hidden-fullscreen" aria-label="more options">
+                <a href="#meeting9-card" data-action="collapse" class="card-header-icon is-hidden-fullscreen" aria-label="more options">
                     <span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
                 </a>
             </header>
-            <div id="meeting8-card" class="is-collapsible is-active" data-parent="accordion-parent-1" data-allow-multiple="true">
+            <div id="meeting9-card" class="is-collapsible" data-parent="accordion-parent-1" data-allow-multiple="true">
                 <div class="card-content content">
                     <p class="is-size-5">Hi Computer Team members! Same old reminders about COVID forms, sign-up forms, and such. Check out the sections above for information. A newer form that we ask you fill out: <a href="/feedback">Feedback form!</a></p>
                     <p class="is-size-5">This meeting was a little special because we met during lunch and had Matthew Casertano as a guest lecturer from Math Team.</p>
@@ -266,6 +277,30 @@
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
                             <li>None, this was a relatively short lunch meeting.</li>
+                        </ul>
+                    <span class="is-size-5"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title is-size-5">Meeting #10 - Intro to Dynamic Programming</p>
+                <a href="#meeting10-card" data-action="collapse" class="card-header-icon is-hidden-fullscreen" aria-label="more options">
+                    <span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+                </a>
+            </header>
+            <div id="meeting10-card" class="is-collapsible is-active" data-parent="accordion-parent-1" data-allow-multiple="true">
+                <div class="card-content content">
+                    <p class="is-size-5">Hi Computer Team members! Same old reminders about COVID forms, sign-up forms, and such. Check out the sections above for information. A newer form that we ask you fill out: <a href="/feedback">Feedback form!</a></p>
+                    <p class="is-size-5"></p>
+                    <span class="is-size-5 is-monospace"><b>Meeting Notes:</b></span>
+                        <ul class="is-size-5">
+                            <li><a href="https://docs.google.com/presentation/d/1jCki-wnYI7FfmnbKKtrHVxTBVqcIYZNo0iNSsyYEnRs/edit?usp=sharing">[10] DP</a></li>
+                        </ul>
+                    <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
+                        <ul class="is-size-5">
+                            {{ load_problems("meeting10") }}
                         </ul>
                     <span class="is-size-5"></span>
                     </p>

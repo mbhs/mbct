@@ -1,15 +1,40 @@
 from staticjinja import Site
 import json
+from urllib.parse import urlparse
 
 if __name__ == "__main__":
     # load in news posts - temporarily before moving to non-static server?
     f = open("news_posts.json")
     posts = json.loads(f.read())
     f.close()
+    
+    # load in curriculum problems - temporarily before moving to non-static server?
+    f = open("problems.json")
+    problems = json.loads(f.read())
+    f.close()
+    
+    # some processing of the problems
+    for itemSet in problems:
+        for item in itemSet["items"]:
+            if item['type'] == "problem":
+                if "usaco.org" in item["url"]:
+                    item["source"] = "USACO"
+                elif "atcoder.jp" in item["url"]:
+                    item["source"] = "AtCoder"
+                elif "cses.fi" in item["url"]:
+                    item["source"] = "CSES"
+                elif "codechef.com" in item["url"]:
+                    item["source"] = "Codechef"
+                else:
+                    item["source"] = "Other"
+
     # news context
     news_context = {"posts":posts}
+    # curriculum context
+    curriculum_context = {"meeting_problems":problems}
 
-    site = Site.make_site(contexts=[("news.html",news_context)],searchpath="templates",outpath="output")
+    # generate site files
+    site = Site.make_site(contexts=[("news.html",news_context),("curriculum.html",curriculum_context)],searchpath="templates",outpath="output")
 
     # enable automatic reloading
     site.render()
