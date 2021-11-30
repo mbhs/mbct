@@ -16,6 +16,7 @@ if __name__ == "__main__":
     # some processing of the problems
     for itemSet in problems:
         for item in itemSet["items"]:
+            print(item)
             if item['type'] == "problem":
                 if "usaco.org" in item["url"]:
                     item["source"] = "USACO"
@@ -25,6 +26,12 @@ if __name__ == "__main__":
                     item["source"] = "CSES"
                 elif "codechef.com" in item["url"]:
                     item["source"] = "Codechef"
+                elif "codeforces" in item["url"]:
+                    item["source"] = "Codeforces"
+                elif "szkopul.edu.pl" in item["url"]:
+                    item["source"] = "SZKOPUL"
+                elif "customSource" in item:
+                    item["source"] = item["customSource"]
                 else:
                     item["source"] = "Other"
 

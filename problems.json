@@ -2,65 +2,95 @@
     {
         "id":"meeting1",
         "items":[
-            {
-                "type":"text",
-                "content":"No problems for Meeting #1"
-            }
+            {"type":"text","content":"No problems for Meeting #1"}
         ]
     },
     {
         "id":"meeting2",
         "items":[
-            {
-                "type":"problem",
-                "url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=572",
-                "name":"Breed Counting"
-            },
-            {
-                "type":"problem",
-                "url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=691",
-                "name":"Hoof, Paper, Scissors"
-            },
-            {
-                "type":"problem",
-                "url":"https://atcoder.jp/contests/abc125/tasks/abc125_c",
-                "name":"GCD on Blackboard"
-            },
-            {
-                "type":"problem",
-                "url":"https://cses.fi/problemset/task/1144",
-                "name":"Salary Queries"
-            },
-            {
-                "type":"problem",
-                "url":"https://cses.fi/problemset/task/1734",
-                "name":"Distinct Values Queries"
-            }
+            {"type":"problem","url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=572","name":"Breed Counting"},
+            {"type":"problem","url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=691","name":"Hoof, Paper, Scissors"},
+            {"type":"problem","url":"https://atcoder.jp/contests/abc125/tasks/abc125_c","name":"GCD on Blackboard"},
+            {"type":"problem","url":"https://cses.fi/problemset/task/1144","name":"Salary Queries"},
+            {"type":"problem","url":"https://cses.fi/problemset/task/1734","name":"Distinct Values Queries"}
+        ]
+    },
+    {
+        "id":"meeting3",
+        "items":[
+            {"type":"problem","url":"https://cses.fi/problemset/task/1629","name":"Movie Festival"},
+            {"type":"problem","url":"https://cses.fi/problemset/task/1073","name":"Towers"},
+            {"type":"problem","url":"https://codeforces.com/problemset/problem/1102/D","name":"Balanced Ternary String"},
+            {"type":"problem","url":"https://atcoder.jp/contests/arc113/tasks/arc113_c","name":"String Invasion"},
+            {"type":"problem","url":"https://codeforces.com/contest/1260/problem/E","name":"Tournament"}
+        ]
+    },
+    {
+        "id":"meeting4",
+        "items":[
+            {"type":"problem","url":"https://cses.fi/problemset/task/1682","name":"Flight Routes Check"},
+            {"type":"problem","url":"https://codeforces.com/problemset/problem/377/A","name":"Maze","pdf":"https://drive.google.com/file/d/1szuj-N3S7V2JB4_s-xVcrmQIT4_fuRoC/view?usp=sharing"},
+            {"type":"problem","url":"https://codeforces.com/contest/1343/problem/E","name":"Weights Distributing","pdf":"https://drive.google.com/file/d/12LcSWFgQ8XTt25DrCsf3GnyBKHj3-Q6Y/view?usp=sharing"},
+            {"type":"problem","url":"http://usaco.org/index.php?page=viewproblem2&cpid=1062","name":"Cowntagion"},
+            {"type":"problem","url":"https://codeforces.com/problemset/problem/1411/C","name":"Peaceful Rooks","pdf":"https://drive.google.com/file/d/1WuClqeRxGb5x0k_1-mbQZUTJ6iY0_m9Z/view?usp=sharing"},
+            {"type":"problem","url":"https://codeforces.com/gym/102802/problem/D","name":"Milky Way","pdf":"https://mbit.mbhs.edu/archive/2019/varsity.pdf","editorial":"https://mbit.mbhs.edu/archive/2019/varsity_editorial.pdf"},
+            {"type":"problem","url":"https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4120","name":"Power Calculus","editorial":"https://ideone.com/v4tz56","customSource":"uVA"}
+        ]
+    },
+    {
+        "id":"meeting5",
+        "items":[
+            {"type":"problem","url":"https://cses.fi/problemset/task/1619/","name":"Restaurant Customer"},
+            {"type":"problem","url":"https://cses.fi/problemset/task/1164","name":"Room Allocation"},
+            {"type":"problem","url":"ttps://cses.fi/problemset/task/1202","name":"Investigation"},
+            {"type":"problem","url":"https://cses.fi/problemset/task/1195/","name":"Flight Discount"},
+            {"type":"problem","url":"https://codeforces.com/contest/702/problem/C","name":"Cellular Network","pdf":"https://drive.google.com/file/d/1TuFSPY0gcz8Y_RahtpoVbuoyqu7iD3hE/view?usp=sharing"},
+            {"type":"problem","url":"https://szkopul.edu.pl/problemset/problem/4CirgBfxbj9tIAS2C7DWCCd7/site/?key=statement","name":"Task Sums","pdf":"https://drive.google.com/file/d/1HK6hM3-SsmZtK71Rndq_D_tCqCzrD5j3/view?usp=sharing"}
+        ]
+
+    },
+    {
+        "id":"meeting6",
+        "items":[
+            {"type":"problem","url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=1038","name":"Social Distancing"},
+            {"type":"problem","url":"https://codeforces.com/contest/888/problem/C","name":"K-Dominant Character","pdf":"https://drive.google.com/file/d/1kPFuRLRBpt_sOlrcweInPRKB372CwNVU/view?usp=sharing"},
+            {"type":"problem","url":"https://codeforces.com/problemset/problem/809/B","name":"Glad to see you!","pdf":"https://drive.google.com/file/d/1IFtulZEnLaEa4ChmWRTNB82w5-TVHJjk/view?usp=sharing"},
+            {"type":"problem","url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=597","name":"Angry Cows"},
+            {"type":"problem","url":"https://codeforces.com/contest/883/problem/I","name":"Photo Processing","pdf":"https://drive.google.com/file/d/14ltbau4BPDyYLtMpwx8Wcdr-FYL2IG5l/view?usp=sharing"},
+            {"type":"problem","url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=991","name":"Loan Repayment"}
+        ]
+    },
+    {
+        "id":"meeting7",
+        "items":[
+            {"type":"text","content":"Refer to sections from previous meetings for problems to do."}
+        ]
+    },
+    {
+        "id":"meeting8",
+        "items":[
+            {"type":"problem","url":"https://atcoder.jp/contests/dp/tasks/dp_p","name":"Independent Set","pdf":"https://drive.google.com/file/d/1a5cL8Jc9vYJOGq-FOS_2LLoulZLBFD0i/view?usp=sharing"},
+            {"type":"problem","url":"https://codeforces.com/problemset/problem/580/C","name":"Kefa and Park","pdf":"https://drive.google.com/file/d/1nxMu9K9J9H0F303orexM_ZZXU7IlA30_/view?usp=sharing"},
+            {"type":"problem","url":"https://codeforces.com/problemset/problem/1437/D","name":"Minimal Height Tree","pdf":"https://drive.google.com/file/d/1ibvy234cx4DP92Q8mX9xhhviGrLATzZu/view?usp=sharing"},
+            {"type":"problem","url":"https://atcoder.jp/contests/arc117/tasks/arc117_d","name":"Miracle Tree","pdf":"https://drive.google.com/file/d/176PuaenfUAgLCLWQ2bOomHEfrNzaZlHO/view?usp=sharing"},
+            {"type":"problem","url":"https://codeforces.com/contest/1436/problem/D","name":"Bandit in a City","pdf":"https://drive.google.com/file/d/1gbKh1_zQtk8FBT7weAJr-kmJQvdrEScz/view?usp=sharing"},
+            {"type":"problem","url":"https://codeforces.com/contest/1447/problem/E","name":"Xor Tree","pdf":"https://drive.google.com/file/d/1_FtRE3jl_denzH8uEZpx5bWfEKFvyzxI/view?usp=sharing"},
+            {"type":"problem","url":"https://codeforces.com/contest/1453/problem/E","name":"Dog Snacks","pdf":"https://drive.google.com/file/d/1Ch3p_ky-aXp-FDtUBn7sOO9bmD4V90S_/view?usp=sharing"}           
+        ]
+    },
+    {
+        "id":"meeting9",
+        "items":[
+            {"type":"text","content":"None, this was a relatively short lunch meeting."}
         ]
     },
     {
         "id":"meeting10",
         "items":[
-            {
-                "type":"problem",
-                "url":"https://atcoder.jp/contests/dp",
-                "name":"DP Contest (multiple problems)"
-            },
-            {
-                "type":"problem",
-                "url":"https://www.codechef.com/FZBZ21A/problems/LCKALI",
-                "name":"Lucky Ali"
-            },
-            {
-                "type":"problem",
-                "url":"http://usaco.org/index.php?page=viewproblem2&cpid=1114",
-                "name":"Modern Art"
-            },
-            {
-                "type":"problem",
-                "url":"https://atcoder.jp/contests/abc227/tasks/abc227_e",
-                "name":"Swap"
-            }
+            {"type":"problem","url":"https://atcoder.jp/contests/dp","name":"DP Contest (multiple problems)"},
+            {"type":"problem","url":"https://www.codechef.com/FZBZ21A/problems/LCKALI","name":"Lucky Ali"},
+            {"type":"problem","url":"http://usaco.org/index.php?page=viewproblem2&cpid=1114","name":"Modern Art"},
+            {"type":"problem","url":"https://atcoder.jp/contests/abc227/tasks/abc227_e","name":"Swap"}
         ]
     }
 ]

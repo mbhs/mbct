@@ -7,7 +7,15 @@
         {% if s['id'] == id %}
             {% for p in s['items'] %}
                 {% if p['type'] == 'problem' %}
-                    <li><a href="{{ p['url'] }}">{{ p['source'] }}: {{ p['name'] }}</a></li>
+                    <li>
+                        <a href="{{ p['url'] }}">{{ p['source'] }}: {{ p['name'] }}</a>
+                        {% if "pdf" in p %}
+                        | <a href="{{ p['pdf'] }}">PDF</a>
+                        {% endif %}
+                        {% if 'editorial' in p %}
+                        | <a href="{{ p['editorial'] }}">Editorial</a>
+                        {% endif %}
+                    </li>
                 {% elif p['type'] == 'text' %}
                     <li>{{ p['content'] }}</li>
                 {% endif %}
@@ -105,11 +113,7 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            <li><a href="https://cses.fi/problemset/task/1629">Problem 1</a> (on cses.fi)</li>
-                            <li><a href="https://cses.fi/problemset/task/1073">Problem 2</a> (on cses.fi)</li>
-                            <li><a href="https://codeforces.com/problemset/problem/1102/D">Problem 3</a> (on Codeforces)</li>
-                            <li><a href="https://atcoder.jp/contests/arc113/tasks/arc113_c">Problem 4</a> (on atcoder.jp)</li>
-                            <li><a href="https://codeforces.com/contest/1260/problem/E">Problem 5</a> (on Codeforces)</li>
+                            {{ load_problems("meeting3") }}
                         </ul>
                     </p>
                 </div>
@@ -133,13 +137,7 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            <li><a href="https://cses.fi/problemset/task/1682">CSES: Flight Routes Check</a></li>
-                            <li><a href="https://codeforces.com/problemset/problem/377/A">CF: Maze</a> | <a href="https://drive.google.com/file/d/1szuj-N3S7V2JB4_s-xVcrmQIT4_fuRoC/view?usp=sharing">PDF</a></li>
-                            <li><a href="https://codeforces.com/contest/1343/problem/E">CF: Weights Distributing</a> | <a href="https://drive.google.com/file/d/12LcSWFgQ8XTt25DrCsf3GnyBKHj3-Q6Y/view?usp=sharing">PDF</a></li>
-                            <li><a href="http://usaco.org/index.php?page=viewproblem2&cpid=1062">USACO: Cowntagion</a></li>
-                            <li><a href="https://codeforces.com/problemset/problem/1411/C">CF: Peaceful Rooks</a> | <a href="https://drive.google.com/file/d/1WuClqeRxGb5x0k_1-mbQZUTJ6iY0_m9Z/view?usp=sharing">PDF</a></li>
-                            <li><a href="https://codeforces.com/gym/102802/problem/D">mBIT: Milky Way</a> | <a href="https://mbit.mbhs.edu/archive/2019/varsity.pdf">Problem Statement</a> | <a href="https://mbit.mbhs.edu/archive/2019/varsity_editorial.pdf">Editorial</a></li>
-                            <li><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4120">uVA: Power Calculus</a> | <a href="https://ideone.com/v4tz56">Sample Solution and Explanation</a></li>
+                            {{ load_problems("meeting4") }}
                         </ul>
                     <span class="is-size-5"><a href="/feedback">Feedback form!</a></span>
                     </p>
@@ -163,12 +161,7 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            <li><a href="https://cses.fi/problemset/task/1619/">CSES: Restaurant Customer</a></li>
-                            <li><a href="https://cses.fi/problemset/task/1164">CSES: Room Allocation</a></li>
-                            <li><a href="https://cses.fi/problemset/task/1202">CSES: Investigation</a></li>
-                            <li><a href="https://cses.fi/problemset/task/1195/">CSES: Flight Discount</a></li>
-                            <li><a href="https://codeforces.com/contest/702/problem/C">CF: Cellular Network</a> | <a href="https://drive.google.com/file/d/1TuFSPY0gcz8Y_RahtpoVbuoyqu7iD3hE/view?usp=sharing">PDF</a></li>
-                            <li><a href="https://szkopul.edu.pl/problemset/problem/4CirgBfxbj9tIAS2C7DWCCd7/site/?key=statement">SZKOPUL: Task Sums</a> | <a href="https://drive.google.com/file/d/1HK6hM3-SsmZtK71Rndq_D_tCqCzrD5j3/view?usp=sharing">PDF</a></li>
+                            {{ load_problems("meeting5") }}
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -192,12 +185,7 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            <li><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=1038">USACO: Social Distancing</a></li>
-                            <li><a href="https://codeforces.com/contest/888/problem/C">CF: K-Dominant Character</a> | <a href="https://drive.google.com/file/d/1kPFuRLRBpt_sOlrcweInPRKB372CwNVU/view?usp=sharing">PDF</a></li>
-                            <li><a href="https://codeforces.com/problemset/problem/809/B">CF: Glad to see you!</a> | <a href="https://drive.google.com/file/d/1IFtulZEnLaEa4ChmWRTNB82w5-TVHJjk/view?usp=sharing">PDF</a></li>
-                            <li><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=597">USACO: Angry Cows</a></li>
-                            <li><a href="https://codeforces.com/contest/883/problem/I">CF: Photo Processing</a> | <a href="https://drive.google.com/file/d/14ltbau4BPDyYLtMpwx8Wcdr-FYL2IG5l/view?usp=sharing">PDF</a></li>
-                            <li><a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=991">USACO: Loan Repayment</a></li>
+                            {{ load_problems("meeting6") }}
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -221,7 +209,7 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            <li>Refer to sections from previous meetings for problems to do.</li>
+                            {{ load_problems("meeting7") }}
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -245,13 +233,7 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            <li><a href="https://atcoder.jp/contests/dp/tasks/dp_p">AtCoder: Independent Set</a> | <a href="https://drive.google.com/file/d/1a5cL8Jc9vYJOGq-FOS_2LLoulZLBFD0i/view?usp=sharing">PDF</a></li>
-                            <li><a href="https://codeforces.com/problemset/problem/580/C">CF: Kefa and Park</a> | <a href="https://drive.google.com/file/d/1nxMu9K9J9H0F303orexM_ZZXU7IlA30_/view?usp=sharing">PDF</a></li>
-                            <li><a href="https://codeforces.com/problemset/problem/1437/D">CF: Minimal Height Tree</a> | <a href="https://drive.google.com/file/d/1ibvy234cx4DP92Q8mX9xhhviGrLATzZu/view?usp=sharing">PDF</a></li>
-                            <li><a href="https://atcoder.jp/contests/arc117/tasks/arc117_d">Atcoder: Miracle Tree</a> | <a href="https://drive.google.com/file/d/176PuaenfUAgLCLWQ2bOomHEfrNzaZlHO/view?usp=sharing">PDF</a></li>
-                            <li><a href="https://codeforces.com/contest/1436/problem/D">CF: Bandit in a City</a> | <a href="https://drive.google.com/file/d/1gbKh1_zQtk8FBT7weAJr-kmJQvdrEScz/view?usp=sharing">PDF</a></li>
-                            <li><a href="https://codeforces.com/contest/1447/problem/E">CF: Xor Tree</a> | <a href="https://drive.google.com/file/d/1_FtRE3jl_denzH8uEZpx5bWfEKFvyzxI/view?usp=sharing">PDF</a></li>
-                            <li><a href="https://codeforces.com/contest/1453/problem/E">CF: Dog Snacks</a> | <a href="https://drive.google.com/file/d/1Ch3p_ky-aXp-FDtUBn7sOO9bmD4V90S_/view?usp=sharing">PDF</a></li>
+                            {{ load_problems("meeting8") }}
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -276,7 +258,7 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            <li>None, this was a relatively short lunch meeting.</li>
+                            {{ load_problems("meeting9") }}
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
