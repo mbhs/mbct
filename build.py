@@ -16,7 +16,6 @@ if __name__ == "__main__":
     # some processing of the problems
     for itemSet in problems:
         for item in itemSet["items"]:
-            print(item)
             if item['type'] == "problem":
                 if "usaco.org" in item["url"]:
                     item["source"] = "USACO"
