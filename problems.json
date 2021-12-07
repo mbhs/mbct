@@ -92,5 +92,16 @@
             {"type":"problem","url":"http://usaco.org/index.php?page=viewproblem2&cpid=1114","name":"Modern Art"},
             {"type":"problem","url":"https://atcoder.jp/contests/abc227/tasks/abc227_e","name":"Swap"}
         ]
+    },
+    {
+        "id":"meeting11",
+        "items":[
+            {"type":"problem","url":"https://codeforces.com/contest/279/problem/B","name":"Books","pdf":"https://drive.google.com/file/d/1PK1g9hHTlUboNtY87kGFlW_GL4slnejb/view?usp=sharing"},
+            {"type":"problem","url":"https://cses.fi/problemset/task/1641","name":"Sum of Three Values"},
+            {"type":"problem","url":"https://cses.fi/problemset/task/1660","name":"Subarray Sums"},
+            {"type":"problem","url":"https://codeforces.com/problemset/problem/701/C","name":"They Are Everywhere","pdf":"https://drive.google.com/file/d/1JhEjygM9EvoaU2ZPJ3VUYCXQBr8H8FuB/view?usp=sharing"},
+            {"type":"problem","url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=918","name":"Sleepy Cow Sorting"},
+            {"type":"problem","url":"https://codeforces.com/problemset/problem/814/C","name":"An impassioned circulation of affection","pdf":"https://drive.google.com/file/d/1w61t_-Z7LjNbOxHiDKqSwgEwL_zkKco3/view?usp=sharing"}
+        ]
     }
 ]
