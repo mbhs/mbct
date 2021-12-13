@@ -103,5 +103,12 @@
             {"type":"problem","url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=918","name":"Sleepy Cow Sorting"},
             {"type":"problem","url":"https://codeforces.com/problemset/problem/814/C","name":"An impassioned circulation of affection","pdf":"https://drive.google.com/file/d/1w61t_-Z7LjNbOxHiDKqSwgEwL_zkKco3/view?usp=sharing"}
         ]
+    },
+    {
+        "id":"meeting12",
+        "items":[
+            {"type":"text","content":"Solving past USACO problems will probably be the most helpful. If you don't already have account, make sure you create one ahead of time."},
+            {"type":"text","content":"Specific practice problems TBD."}
+        ]
     }
 ]
