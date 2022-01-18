@@ -107,8 +107,13 @@
     {
         "id":"meeting12",
         "items":[
-            {"type":"text","content":"Solving past USACO problems will probably be the most helpful. If you don't already have account, make sure you create one ahead of time."},
-            {"type":"text","content":"Specific practice problems TBD."}
+            {"type":"text","content":"Solving past USACO problems will probably be the most helpful. If you don't already have account, make sure you create one ahead of time."}
+        ]
+    },
+    {
+        "id":"meeting13",
+        "items":[
+            {"type":"text","content":"Find the problems from the last USACO contest <a href='http://www.usaco.org/index.php?page=dec21results'>here</a>"}
         ]
     }
 ]
