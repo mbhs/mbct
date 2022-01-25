@@ -115,5 +115,16 @@
         "items":[
             {"type":"text","content":"Find the problems from the last USACO contest <a href='http://www.usaco.org/index.php?page=dec21results'>here</a>"}
         ]
+    },
+    {
+        "id":"meeting14",
+        "items":[
+            {"type":"problem","url":"https://cses.fi/problemset/task/2206","name":"Pizzeria Queries"},
+            {"type":"problem","url":"https://cses.fi/problemset/task/1190","name":"Subarray Sum Queries"},
+            {"type":"problem","url":"https://cses.fi/problemset/task/1734","name":"Distinct Values Queries"},
+            {"type":"problem","url":"https://www.codechef.com/COOK135A/problems/SLIPPERS","name":"Guests like slippers"},
+            {"type":"problem","url":"https://atcoder.jp/contests/arc125/tasks/arc125_d","name":"Unique Subsequence"},
+            {"type":"problem","url":"https://codeforces.com/contest/1609/problem/E","name":"William The Oblivious","pdf":"https://drive.google.com/file/d/1MEcmJgghQafWGFWgsralfro7Xie3NmKI/view?usp=sharing"}
+        ]
     }
 ]
