@@ -126,5 +126,22 @@
             {"type":"problem","url":"https://atcoder.jp/contests/arc125/tasks/arc125_d","name":"Unique Subsequence"},
             {"type":"problem","url":"https://codeforces.com/contest/1609/problem/E","name":"William The Oblivious","pdf":"https://drive.google.com/file/d/1MEcmJgghQafWGFWgsralfro7Xie3NmKI/view?usp=sharing"}
         ]
+    },
+    {
+        "id":"meeting15",
+        "items":[
+            {"type":"text","content":"Find the problems from the January USACO contest <a href='http://usaco.org/index.php?page=jan22results'>here</a>"}
+        ]
+    },
+    {
+        "id":"meeting16",
+        "items":[
+            {"type":"problem","url":"http://usaco.org/index.php?page=viewproblem2&cpid=1089","name":"Uddered but not Herd (example)","pdf":"https://drive.google.com/file/d/1uA77Zx95cSkXFDbjKEwB6T2nTyCQUR4X/view?usp=sharing"},
+            {"type":"problem","url":"http://usaco.org/index.php?page=viewproblem2&cpid=1114","name":"Modern Art 3 (example)","pdf":"https://drive.google.com/file/d/119PfHTvTZE16kL4mD_44WDWLU_iANaaa/view?usp=sharing"},
+            {"type":"problem","url":"http://usaco.org/index.php?page=viewproblem2&cpid=1043","name":"Exercise","pdf":"https://drive.google.com/file/d/1pttbkfgiCK7qKgYgn32q01_LVYkqH-gV/view?usp=sharing"},
+            {"type":"problem","url":"http://usaco.org/index.php?page=viewproblem2&cpid=945","name":"Snakes","pdf":"https://drive.google.com/file/d/18M61BE7Gxo4trxSVQb_Q59tDlK_FHmDx/view?usp=sharing"},
+            {"type":"problem","url":"https://atcoder.jp/contests/agc050/tasks/agc050_b","name":"Three Coins"},
+            {"type":"problem","url":"https://atcoder.jp/contests/abc234/tasks/abc234_g","name":"Divide a Sequence"}
+        ]
     }
 ]
