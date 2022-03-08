@@ -143,5 +143,19 @@
             {"type":"problem","url":"https://atcoder.jp/contests/agc050/tasks/agc050_b","name":"Three Coins"},
             {"type":"problem","url":"https://atcoder.jp/contests/abc234/tasks/abc234_g","name":"Divide a Sequence"}
         ]
+    },
+    {
+        "id":"meeting17",
+        "items":[
+            {"type":"text","content":"Find the problems from the February USACO contest <a href='http://usaco.org/index.php?page=feb22results'>here</a>"}
+        ]
+    },
+    {
+        "id":"meeting18",
+        "items":[
+            {"type":"problem","url":"https://cses.fi/problemset/task/1676","name":"Road Construction"},
+            {"type":"problem","url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=767","name":"Haybale Feast"},
+            {"type":"problem","url":"http://usaco.org/index.php?page=viewproblem2&cpid=384","name":"Ski Course Rating"}
+        ]
     }
 ]
