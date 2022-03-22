@@ -157,5 +157,12 @@
             {"type":"problem","url":"http://www.usaco.org/index.php?page=viewproblem2&cpid=767","name":"Haybale Feast"},
             {"type":"problem","url":"http://usaco.org/index.php?page=viewproblem2&cpid=384","name":"Ski Course Rating"}
         ]
+    },
+    {
+        "id":"meeting19",
+        "items":[
+            {"type":"problem","url":"https://www.spoj.com/problems/GOODA/","name":"Good Travels"},
+            {"type":"problem","url":"https://codeforces.com/contest/1514/problem/E","name":"Baby Ehab's Hyper Apartment","pdf":"https://drive.google.com/file/d/14tBQCB-2OxQwNus2AcoIcCGraZi74iIF/view?usp=sharing"}
+        ]
     }
 ]

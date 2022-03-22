@@ -29,6 +29,8 @@ if __name__ == "__main__":
                     item["source"] = "Codeforces"
                 elif "szkopul.edu.pl" in item["url"]:
                     item["source"] = "SZKOPUL"
+                elif "spoj.com" in item["url"]:
+                    item["source"] = "SPOJ"
                 elif "customSource" in item:
                     item["source"] = item["customSource"]
                 else:
