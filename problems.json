@@ -164,5 +164,13 @@
             {"type":"problem","url":"https://www.spoj.com/problems/GOODA/","name":"Good Travels"},
             {"type":"problem","url":"https://codeforces.com/contest/1514/problem/E","name":"Baby Ehab's Hyper Apartment","pdf":"https://drive.google.com/file/d/14tBQCB-2OxQwNus2AcoIcCGraZi74iIF/view?usp=sharing"}
         ]
+    },
+    {
+        "id":"meeting20",
+        "items":[
+            {"type":"text","content":"Here are some additional DSU problems for practice (links to the actual problem require signing in and enrolling in the Codeforces course; use the PDFs). Feel free to review problems from other lectures if you want though."},
+            {"type":"problem","url":"https://codeforces.com/edu/course/2/lesson/7/1/practice/contest/289390/problem/D","name":"Cutting a graph","pdf":"https://drive.google.com/file/d/1G2ef5LmPPa5Lp8Wskfamz4woMmQUIPeg/view?usp=sharing"},
+            {"type":"problem","url":"https://codeforces.com/edu/course/2/lesson/7/1/practice/contest/289390/problem/E","name":"Monkeys","pdf":"https://drive.google.com/file/d/1hmOiX47yFAQTJn6iNIcDvcHHPe82BJoI/view?usp=sharing"}
+        ]
     }
 ]
