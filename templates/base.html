@@ -15,6 +15,12 @@
 		{"name":"calendar","href":"/calendar"},
 		{"name":"resources","href":"/resources"},
 		{"name":"about","href":"/about"}
+	],
+	"curriculum_pages":[
+		{"name":"2021 - 2022","href":"/curriculum"},
+		{"name":"2020 - 2021","href":"https://docs.google.com/spreadsheets/d/1Xy4wzs5unlaZ0ADzUttVIFYBPc91QOdohS_MFdMiPwg/edit?usp=sharing"},
+		{"name":"2019 - 2020","href":"https://drive.google.com/drive/folders/1Lxz8kdtYT_Etf1H53aIrIjFmaoxVS2D2?usp=sharing"},
+		{"name":"2018 - 2019","href":"https://drive.google.com/drive/folders/1zGRo4GzL6MxbnlTczLyEJK53TmGYTTXV?usp=sharing"}
 	]}
 %}
 
@@ -48,7 +54,18 @@
             <div id="navbar-first" class="navbar-menu pl-6 py-3 navbar-left">
 				<div class="navbar-start">
 					{% for a in navigation_bar["left"] %}
+						{% if a['name'] == "curriculum" %}
+						<div class="navbar-item has-dropdown is-hoverable">
+							<a class="navbar-item is-size-5 has-text-weight-medium {% if a['name']==active_page %}is-active{% endif %}" href="{{ a['href'] }}">{{ a['name'] }}</a>
+							<div class="navbar-dropdown">
+								{% for b in navigation_bar["curriculum_pages"] %}
+								<a class="navbar-item is-size-5 has-text-weight-medium {% if b['name']==active_subpage %}is-active{% endif %}" href="{{ b['href'] }}">{{ b['name'] }}</a>
+								{% endfor %}
+							</div>
+						</div>
+						{% else %}
 						<a class="navbar-item is-size-5 has-text-weight-medium {% if a['name']==active_page %}is-active{% endif %}" href="{{ a['href'] }}">{{ a['name'] }}</a>
+						{% endif %}
 					{% endfor %}
 				</div>
             </div>

@@ -172,5 +172,33 @@
             {"type":"problem","url":"https://codeforces.com/edu/course/2/lesson/7/1/practice/contest/289390/problem/D","name":"Cutting a graph","pdf":"https://drive.google.com/file/d/1G2ef5LmPPa5Lp8Wskfamz4woMmQUIPeg/view?usp=sharing"},
             {"type":"problem","url":"https://codeforces.com/edu/course/2/lesson/7/1/practice/contest/289390/problem/E","name":"Monkeys","pdf":"https://drive.google.com/file/d/1hmOiX47yFAQTJn6iNIcDvcHHPe82BJoI/view?usp=sharing"}
         ]
+    },
+    {
+        "id":"meeting21",
+        "items":[
+            {"type":"text","content":"Find the problems from the USACO Open contest <a href='http://usaco.org/index.php?page=open22results'>here</a>"}
+        ]
+    },
+    {
+        "id":"meeting22",
+        "items":[
+            {"type":"problem","url":"https://atcoder.jp/contests/abc246/tasks/abc246_g","name":"Game on Tree 3"},
+            {"type":"problem","url":"https://codingcompetitions.withgoogle.com/codejamio/round/00000000009d9870/0000000000a33bc7#problem","name":"Interesting Outing","source":"Google Code Jam"},
+            {"type":"problem","url":"http://usaco.org/index.php?page=viewproblem2&cpid=1113","name":"Stone Game"},
+            {"type":"problem","url":"https://atcoder.jp/contests/agc050/tasks/agc050_c","name":"Block Game"},
+            {"type":"problem","url":"https://codeforces.com/gym/102392/problem/F","name":"Game on a Tree","pdf":"https://drive.google.com/file/d/1_AllIJ8LNjq1HBVOT16648Fab2l3Jd9y/view?usp=sharing"}
+        ]
+    },
+    {
+        "id":"meeting23",
+        "items":[
+            {"type":"text","content":"None"}
+        ]
+    },
+    {
+        "id":"meeting24",
+        "items":[
+            {"type":"text","content":"None"}
+        ]
     }
 ]

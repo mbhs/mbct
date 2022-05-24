@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% set active_page = "curriculum" %}
 
+{# IMPORTANT: Set this variable for curriculum pages #}
+{% set active_subpage = "2021 - 2022" %}
+
 {% macro load_problems(id) -%}
     {# will be more efficient once the entire curriculum page gen system is improved #}
     {% for s in meeting_problems %}
@@ -513,7 +516,7 @@
                         <span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
                     </a>
                 </header>
-                <div id="meeting20-card" class="is-collapsible is-active" data-parent="accordion-parent-1" data-allow-multiple="true">
+                <div id="meeting20-card" class="is-collapsible" data-parent="accordion-parent-1" data-allow-multiple="true">
                     <div class="card-content content">
                         <p class="is-size-5">Hey programmers! Since Q3 ends this week, we're holding our second problem solving session of the year (our first was at the end of Q1. We hope this will give you a chance to review problems from previous lectures that you may not have gotten to. Next week, we will be reviewing the USACO Open contest.</p>
                         <p class="is-size-5"></p>
@@ -527,6 +530,102 @@
                             </ul>
                         <span class="is-size-5"></span>
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title is-size-5">Meeting #21 - USACO Open Review</p>
+                    <a href="#meeting21-card" data-action="collapse" class="card-header-icon is-hidden-fullscreen" aria-label="more options">
+                        <span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+                    </a>
+                </header>
+                <div id="meeting21-card" class="is-collapsible" data-parent="accordion-parent-1" data-allow-multiple="true">
+                    <div class="card-content content">
+                        <p class="is-size-5">Hey programmers! Today, we will review problems from the USACO Open contest.</p>
+                        <p class="is-size-5"></p>
+                        <span class="is-size-5 is-monospace"><b>Meeting Notes:</b></span>
+                            <ul class="is-size-5">
+                                <li><a href="https://docs.google.com/document/d/15hv0TMtTBQ3aus98mMocfp2B4rXSlrzJkCfVkiMoSv4/edit?usp=sharing">[21] 2022 USACO Open Review Notes</a></li>
+                            </ul>
+                        <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
+                            <ul class="is-size-5">
+                                {{ load_problems("meeting21") }}
+                            </ul>
+                        <span class="is-size-5"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title is-size-5">Meeting #22 - Game Theory</p>
+                    <a href="#meeting22-card" data-action="collapse" class="card-header-icon is-hidden-fullscreen" aria-label="more options">
+                        <span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+                    </a>
+                </header>
+                <div id="meeting22-card" class="is-collapsible" data-parent="accordion-parent-1" data-allow-multiple="true">
+                    <div class="card-content content">
+                        <p class="is-size-5">Hello programmers! We will be having a lecture on game theory by Claire today.</p>
+                        <p class="is-size-5"></p>
+                        <span class="is-size-5 is-monospace"><b>Meeting Notes:</b></span>
+                            <ul class="is-size-5">
+                                <li><a href="https://docs.google.com/presentation/d/1Xp1s4BrSZFcwGxYhyB5cn1R6rfvemlYKG7q3XlevIR8/edit?usp=sharing">[22] Game Theory</a></li>
+                            </ul>
+                        <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
+                            <ul class="is-size-5">
+                                {{ load_problems("meeting22") }}
+                            </ul>
+                        <span class="is-size-5"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-size-5">Meeting #23 - Alumni Lectures</p>
+                        <a href="#meeting23-card" data-action="collapse" class="card-header-icon is-hidden-fullscreen" aria-label="more options">
+                            <span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+                        </a>
+                    </header>
+                    <div id="meeting23-card" class="is-collapsible" data-parent="accordion-parent-1" data-allow-multiple="true">
+                        <div class="card-content content">
+                            <p class="is-size-5">Hi programmers! we'll have two special mini-lectures by alumni Gabriel Wu and Aaron Mei, both of whom graduated from the Blair Magnet last year. Gabe will discuss paradoxes in CS, while Aaron will lecture on randomized algorithms. These two have made lasting contributions to Computer Team, and we're excited to see them again.</p>
+                            <p class="is-size-5"></p>
+                            <span class="is-size-5 is-monospace"><b>Meeting Notes:</b></span>
+                                <ul class="is-size-5">
+                                    <li><a href="https://docs.google.com/document/d/1I93ynReCg3XgcSjdIsMlL6GDW52oqxT3im2du5hlCaU/edit?usp=sharing">[23] Alum Lecture Notes</a></li>
+                                    <li><a href="https://gabrieldwu.github.io/describability-paradox">Gabe's Blog Post on Describability Paradox</a></li>
+                                </ul>
+                            <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
+                                <ul class="is-size-5">
+                                    {{ load_problems("meeting23") }}
+                                </ul>
+                            <span class="is-size-5"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-size-5">Meeting #24 - Closing Party and mBIT Review</p>
+                        <a href="#meeting24-card" data-action="collapse" class="card-header-icon is-hidden-fullscreen" aria-label="more options">
+                            <span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+                        </a>
+                    </header>
+                    <div id="meeting24-card" class="is-collapsible is-active" data-parent="accordion-parent-1" data-allow-multiple="true">
+                        <div class="card-content content">
+                            <p class="is-size-5">Hello Computer Team! Since the seniors will graduate next week, today will be Comp Team's last meeting of the 2021–2022 school year! We hope everyone had a good mBIT experience last Sundary. Claire will be doing an mBIT review and discussing solutions. We'll also have a discussion about this past year and ideas for the future.</p>
+                            <span class="is-size-5 is-monospace"><b>Meeting Notes:</b></span>
+                                <ul class="is-size-5">
+                                    <li>None</li>
+                                </ul>
+                            <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
+                                <ul class="is-size-5">
+                                    {{ load_problems("meeting24") }}
+                                </ul>
+                            <span class="is-size-5"></span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
