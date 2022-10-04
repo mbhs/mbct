@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% set active_page = "meeting recaps" %}
+{% block content %}
+<section class="section">
+    <div class="container content has-text-centered">
+        <h1 class="title is-1">Meeting Recaps</h1>
+    </div>
+    <div class="container content">
+        <p class="is-size-5">Our lectures and meeting writeups may be found in our <a
+                href="https://drive.google.com/drive/folders/1oCTxgBV96ce0uD9PM0QdqD2cgXyv4tPq">2022-2023 Google Drive</a>.
+        <div class="container">
+            <div class="iframe-wrapper">
+                <iframe src="https://drive.google.com/embeddedfolderview?id=1oCTxgBV96ce0uD9PM0QdqD2cgXyv4tPq#list"
+                    style="border:solid 1px #777" class="iframe"></iframe>
+            </div>
+        </div>
+</section>
+{% endblock %}
