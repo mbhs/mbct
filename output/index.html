@@ -1,7 +1,106 @@
-{% extends 'base.html' %}
-{% set active_page = "home" %}
 
-{% block content %}
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Home | MBHS Comp Team</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	    <meta charset="utf-8"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<script src="https://kit.fontawesome.com/dc1b15ec23.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="bulma-collapsible.min.js"></script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-BP1Q6D1P90"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-BP1Q6D1P90');
+		</script>
+	</head>
+	<body class="bg-light-grey">
+		<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+            <div id="navbar-first" class="navbar-menu pl-6 py-3 navbar-left">
+				<div class="navbar-start">
+					
+						
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="mailto:mbhscompteam@gmail.com">email</a>
+						
+					
+						
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="https://mbit.mbhs.edu">tournament</a>
+						
+					
+				</div>
+            </div>
+            <div id="navbar" class="py-3 is-justify-content-center is-align-content-center navbar-logo">
+                <div class="navbar-brand is-align-items-center">
+                    <a class="navbar-item" href="/">
+                        <img src="images/logo.png" style="max-height: 108px;">
+                    </a>
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+            <div id="navbar-last" class="navbar-menu pr-6 py-3 navbar-right">
+                <div class="navbar-end">
+                    
+						<a class="navbar-item is-size-5 has-text-weight-medium is-active" href="/">home</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/news">news</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/calendar">calendar</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/resources">resources</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/recaps">meeting recaps</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/about">about</a>
+					
+                </div>
+			</div>
+			<!-- This is the navbar for mobile views -->
+			<div id="navbar-mobile" class="navbar-menu py-3 navbar-mobile">
+                <div class="navbar-start">
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="mailto:mbhscompteam@gmail.com">email</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="https://mbit.mbhs.edu">tournament</a>
+					
+					<hr/>
+                    
+						<a class="navbar-item is-size-5 has-text-weight-medium is-active" href="/">home</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/news">news</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/calendar">calendar</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/resources">resources</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/recaps">meeting recaps</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/about">about</a>
+					
+                </div>
+			</div>
+		</nav>
+		<main class="wrapper">
+		
 <div class="hero has-background is-large">
     <img alt="Front of MBHS" class="hero-background is-transparent" src="images/home_banner.png" />
 	<div class="hero-body">
@@ -77,4 +176,30 @@
         </div>
     </div>
 </section>
-{% endblock %}
+
+		</main>
+		<footer class="footer section">
+			<div class="content container is-size-5">
+				<hr/>
+				<p>
+					
+						<a href="/">home</a> | 
+					
+						<a href="/news">news</a> | 
+					
+						<a href="/calendar">calendar</a> | 
+					
+						<a href="/resources">resources</a> | 
+					
+						<a href="/recaps">meeting recaps</a> | 
+					
+						<a href="/about">about</a> 
+					
+				</p>
+				<p>51 University Blvd East, MD 20901<br/>
+					Mondays @ 11:25 AM | Room 328</p>
+			</div>
+		</footer>
+		<script type="text/javascript" src="element_control.js"></script>
+	</body>
+</html>

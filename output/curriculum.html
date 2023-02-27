@@ -1,33 +1,106 @@
-{% extends 'base.html' %}
-{% set active_page = "curriculum" %}
 
-{# IMPORTANT: Set this variable for curriculum pages #}
-{% set active_subpage = "2021 - 2022" %}
 
-{% macro load_problems(id) -%}
-    {# will be more efficient once the entire curriculum page gen system is improved #}
-    {% for s in meeting_problems %}
-        {% if s['id'] == id %}
-            {% for p in s['items'] %}
-                {% if p['type'] == 'problem' %}
-                    <li>
-                        <a href="{{ p['url'] }}">{{ p['source'] }}: {{ p['name'] }}</a>
-                        {% if "pdf" in p %}
-                        | <a href="{{ p['pdf'] }}">PDF</a>
-                        {% endif %}
-                        {% if 'editorial' in p %}
-                        | <a href="{{ p['editorial'] }}">Editorial</a>
-                        {% endif %}
-                    </li>
-                {% elif p['type'] == 'text' %}
-                    <li>{{ p['content'] }}</li>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-    {% endfor %}
-{%- endmacro %}
 
-{% block content %}
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Curriculum | MBHS Comp Team</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	    <meta charset="utf-8"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<script src="https://kit.fontawesome.com/dc1b15ec23.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="bulma-collapsible.min.js"></script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-BP1Q6D1P90"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-BP1Q6D1P90');
+		</script>
+	</head>
+	<body class="bg-light-grey">
+		<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+            <div id="navbar-first" class="navbar-menu pl-6 py-3 navbar-left">
+				<div class="navbar-start">
+					
+						
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="mailto:mbhscompteam@gmail.com">email</a>
+						
+					
+						
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="https://mbit.mbhs.edu">tournament</a>
+						
+					
+				</div>
+            </div>
+            <div id="navbar" class="py-3 is-justify-content-center is-align-content-center navbar-logo">
+                <div class="navbar-brand is-align-items-center">
+                    <a class="navbar-item" href="/">
+                        <img src="images/logo.png" style="max-height: 108px;">
+                    </a>
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+            <div id="navbar-last" class="navbar-menu pr-6 py-3 navbar-right">
+                <div class="navbar-end">
+                    
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/">home</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/news">news</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/calendar">calendar</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/resources">resources</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/recaps">meeting recaps</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/about">about</a>
+					
+                </div>
+			</div>
+			<!-- This is the navbar for mobile views -->
+			<div id="navbar-mobile" class="navbar-menu py-3 navbar-mobile">
+                <div class="navbar-start">
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="mailto:mbhscompteam@gmail.com">email</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="https://mbit.mbhs.edu">tournament</a>
+					
+					<hr/>
+                    
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/">home</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/news">news</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/calendar">calendar</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/resources">resources</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/recaps">meeting recaps</a>
+					
+						<a class="navbar-item is-size-5 has-text-weight-medium " href="/about">about</a>
+					
+                </div>
+			</div>
+		</nav>
+		<main class="wrapper">
+		
 <section class="section">
     <div class="container content has-text-centered">
         <h1 class="title is-1">Curriculum</h1>
@@ -64,7 +137,62 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems('meeting1') }}
+                            
+    
+        
+            
+                
+                    <li>No problems for Meeting #1</li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     </p>
                 </div>
@@ -90,7 +218,98 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems('meeting2') }}
+                            
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=572">USACO: Breed Counting</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=691">USACO: Hoof, Paper, Scissors</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://atcoder.jp/contests/abc125/tasks/abc125_c">AtCoder: GCD on Blackboard</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1144">CSES: Salary Queries</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1734">CSES: Distinct Values Queries</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     </p>
                 </div>
@@ -116,7 +335,98 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting3") }}
+                            
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1629">CSES: Movie Festival</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1073">CSES: Towers</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/problemset/problem/1102/D">Codeforces: Balanced Ternary String</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://atcoder.jp/contests/arc113/tasks/arc113_c">AtCoder: String Invasion</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/contest/1260/problem/E">Codeforces: Tournament</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     </p>
                 </div>
@@ -140,7 +450,126 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting4") }}
+                            
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1682">CSES: Flight Routes Check</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/problemset/problem/377/A">Codeforces: Maze</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1szuj-N3S7V2JB4_s-xVcrmQIT4_fuRoC/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/contest/1343/problem/E">Codeforces: Weights Distributing</a>
+                        
+                        | <a href="https://drive.google.com/file/d/12LcSWFgQ8XTt25DrCsf3GnyBKHj3-Q6Y/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="http://usaco.org/index.php?page=viewproblem2&cpid=1062">USACO: Cowntagion</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/problemset/problem/1411/C">Codeforces: Peaceful Rooks</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1WuClqeRxGb5x0k_1-mbQZUTJ6iY0_m9Z/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/gym/102802/problem/D">Codeforces: Milky Way</a>
+                        
+                        | <a href="https://mbit.mbhs.edu/archive/2019/varsity.pdf">PDF</a>
+                        
+                        
+                        | <a href="https://mbit.mbhs.edu/archive/2019/varsity_editorial.pdf">Editorial</a>
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4120">uVA: Power Calculus</a>
+                        
+                        
+                        | <a href="https://ideone.com/v4tz56">Editorial</a>
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     <span class="is-size-5"><a href="/feedback">Feedback form!</a></span>
                     </p>
@@ -164,7 +593,110 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting5") }}
+                            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1619/">CSES: Restaurant Customer</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1164">CSES: Room Allocation</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="ttps://cses.fi/problemset/task/1202">CSES: Investigation</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1195/">CSES: Flight Discount</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/contest/702/problem/C">Codeforces: Cellular Network</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1TuFSPY0gcz8Y_RahtpoVbuoyqu7iD3hE/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://szkopul.edu.pl/problemset/problem/4CirgBfxbj9tIAS2C7DWCCd7/site/?key=statement">SZKOPUL: Task Sums</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1HK6hM3-SsmZtK71Rndq_D_tCqCzrD5j3/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -188,7 +720,112 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting6") }}
+                            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=1038">USACO: Social Distancing</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/contest/888/problem/C">Codeforces: K-Dominant Character</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1kPFuRLRBpt_sOlrcweInPRKB372CwNVU/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/problemset/problem/809/B">Codeforces: Glad to see you!</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1IFtulZEnLaEa4ChmWRTNB82w5-TVHJjk/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=597">USACO: Angry Cows</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/contest/883/problem/I">Codeforces: Photo Processing</a>
+                        
+                        | <a href="https://drive.google.com/file/d/14ltbau4BPDyYLtMpwx8Wcdr-FYL2IG5l/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=991">USACO: Loan Repayment</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -212,7 +849,62 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting7") }}
+                            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>Refer to sections from previous meetings for problems to do.</li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -236,7 +928,128 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting8") }}
+                            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="https://atcoder.jp/contests/dp/tasks/dp_p">AtCoder: Independent Set</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1a5cL8Jc9vYJOGq-FOS_2LLoulZLBFD0i/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/problemset/problem/580/C">Codeforces: Kefa and Park</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1nxMu9K9J9H0F303orexM_ZZXU7IlA30_/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/problemset/problem/1437/D">Codeforces: Minimal Height Tree</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1ibvy234cx4DP92Q8mX9xhhviGrLATzZu/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://atcoder.jp/contests/arc117/tasks/arc117_d">AtCoder: Miracle Tree</a>
+                        
+                        | <a href="https://drive.google.com/file/d/176PuaenfUAgLCLWQ2bOomHEfrNzaZlHO/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/contest/1436/problem/D">Codeforces: Bandit in a City</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1gbKh1_zQtk8FBT7weAJr-kmJQvdrEScz/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/contest/1447/problem/E">Codeforces: Xor Tree</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1_FtRE3jl_denzH8uEZpx5bWfEKFvyzxI/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/contest/1453/problem/E">Codeforces: Dog Snacks</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1Ch3p_ky-aXp-FDtUBn7sOO9bmD4V90S_/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -261,7 +1074,62 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting9") }}
+                            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>None, this was a relatively short lunch meeting.</li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -285,7 +1153,90 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting10") }}
+                            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="https://atcoder.jp/contests/dp">AtCoder: DP Contest (multiple problems)</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://www.codechef.com/FZBZ21A/problems/LCKALI">Codechef: Lucky Ali</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="http://usaco.org/index.php?page=viewproblem2&cpid=1114">USACO: Modern Art</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://atcoder.jp/contests/abc227/tasks/abc227_e">AtCoder: Swap</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -309,7 +1260,112 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting11") }}
+                            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/contest/279/problem/B">Codeforces: Books</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1PK1g9hHTlUboNtY87kGFlW_GL4slnejb/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1641">CSES: Sum of Three Values</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1660">CSES: Subarray Sums</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/problemset/problem/701/C">Codeforces: They Are Everywhere</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1JhEjygM9EvoaU2ZPJ3VUYCXQBr8H8FuB/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=918">USACO: Sleepy Cow Sorting</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/problemset/problem/814/C">Codeforces: An impassioned circulation of affection</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1w61t_-Z7LjNbOxHiDKqSwgEwL_zkKco3/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -333,7 +1389,62 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting12") }}
+                            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>Solving past USACO problems will probably be the most helpful. If you don't already have account, make sure you create one ahead of time.</li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -357,7 +1468,62 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting13") }}
+                            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>Find the problems from the last USACO contest <a href='http://www.usaco.org/index.php?page=dec21results'>here</a></li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -381,7 +1547,108 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting14") }}
+                            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/2206">CSES: Pizzeria Queries</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1190">CSES: Subarray Sum Queries</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1734">CSES: Distinct Values Queries</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://www.codechef.com/COOK135A/problems/SLIPPERS">Codechef: Guests like slippers</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://atcoder.jp/contests/arc125/tasks/arc125_d">AtCoder: Unique Subsequence</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/contest/1609/problem/E">Codeforces: William The Oblivious</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1MEcmJgghQafWGFWgsralfro7Xie3NmKI/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -407,7 +1674,62 @@
                         </ul>
                     <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                         <ul class="is-size-5">
-                            {{ load_problems("meeting15") }}
+                            
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>Find the problems from the January USACO contest <a href='http://usaco.org/index.php?page=jan22results'>here</a></li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                         </ul>
                     <span class="is-size-5"></span>
                     </p>
@@ -430,7 +1752,114 @@
                             </ul>
                         <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                             <ul class="is-size-5">
-                                {{ load_problems("meeting16") }}
+                                
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="http://usaco.org/index.php?page=viewproblem2&cpid=1089">USACO: Uddered but not Herd (example)</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1uA77Zx95cSkXFDbjKEwB6T2nTyCQUR4X/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="http://usaco.org/index.php?page=viewproblem2&cpid=1114">USACO: Modern Art 3 (example)</a>
+                        
+                        | <a href="https://drive.google.com/file/d/119PfHTvTZE16kL4mD_44WDWLU_iANaaa/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="http://usaco.org/index.php?page=viewproblem2&cpid=1043">USACO: Exercise</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1pttbkfgiCK7qKgYgn32q01_LVYkqH-gV/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="http://usaco.org/index.php?page=viewproblem2&cpid=945">USACO: Snakes</a>
+                        
+                        | <a href="https://drive.google.com/file/d/18M61BE7Gxo4trxSVQb_Q59tDlK_FHmDx/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://atcoder.jp/contests/agc050/tasks/agc050_b">AtCoder: Three Coins</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://atcoder.jp/contests/abc234/tasks/abc234_g">AtCoder: Divide a Sequence</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                             </ul>
                         <span class="is-size-5"></span>
                         </p>
@@ -454,7 +1883,62 @@
                             </ul>
                         <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                             <ul class="is-size-5">
-                                {{ load_problems("meeting17") }}
+                                
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>Find the problems from the February USACO contest <a href='http://usaco.org/index.php?page=feb22results'>here</a></li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                             </ul>
                         <span class="is-size-5"></span>
                         </p>
@@ -478,7 +1962,82 @@
                             </ul>
                         <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                             <ul class="is-size-5">
-                                {{ load_problems("meeting18") }}
+                                
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="https://cses.fi/problemset/task/1676">CSES: Road Construction</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=767">USACO: Haybale Feast</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="http://usaco.org/index.php?page=viewproblem2&cpid=384">USACO: Ski Course Rating</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                             </ul>
                         <span class="is-size-5"></span>
                         </p>
@@ -502,7 +2061,76 @@
                             </ul>
                         <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                             <ul class="is-size-5">
-                                {{ load_problems("meeting19") }}
+                                
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="https://www.spoj.com/problems/GOODA/">SPOJ: Good Travels</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/contest/1514/problem/E">Codeforces: Baby Ehab's Hyper Apartment</a>
+                        
+                        | <a href="https://drive.google.com/file/d/14tBQCB-2OxQwNus2AcoIcCGraZi74iIF/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                             </ul>
                         <span class="is-size-5"></span>
                         </p>
@@ -526,7 +2154,82 @@
                             </ul>
                         <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                             <ul class="is-size-5">
-                                {{ load_problems("meeting20") }}
+                                
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>Here are some additional DSU problems for practice (links to the actual problem require signing in and enrolling in the Codeforces course; use the PDFs). Feel free to review problems from other lectures if you want though.</li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/edu/course/2/lesson/7/1/practice/contest/289390/problem/D">Codeforces: Cutting a graph</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1G2ef5LmPPa5Lp8Wskfamz4woMmQUIPeg/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/edu/course/2/lesson/7/1/practice/contest/289390/problem/E">Codeforces: Monkeys</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1hmOiX47yFAQTJn6iNIcDvcHHPe82BJoI/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
                             </ul>
                         <span class="is-size-5"></span>
                         </p>
@@ -550,7 +2253,62 @@
                             </ul>
                         <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                             <ul class="is-size-5">
-                                {{ load_problems("meeting21") }}
+                                
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>Find the problems from the USACO Open contest <a href='http://usaco.org/index.php?page=open22results'>here</a></li>
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
                             </ul>
                         <span class="is-size-5"></span>
                         </p>
@@ -574,7 +2332,100 @@
                             </ul>
                         <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                             <ul class="is-size-5">
-                                {{ load_problems("meeting22") }}
+                                
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>
+                        <a href="https://atcoder.jp/contests/abc246/tasks/abc246_g">AtCoder: Game on Tree 3</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codingcompetitions.withgoogle.com/codejamio/round/00000000009d9870/0000000000a33bc7#problem">Other: Interesting Outing</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="http://usaco.org/index.php?page=viewproblem2&cpid=1113">USACO: Stone Game</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://atcoder.jp/contests/agc050/tasks/agc050_c">AtCoder: Block Game</a>
+                        
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="https://codeforces.com/gym/102392/problem/F">Codeforces: Game on a Tree</a>
+                        
+                        | <a href="https://drive.google.com/file/d/1_AllIJ8LNjq1HBVOT16648Fab2l3Jd9y/view?usp=sharing">PDF</a>
+                        
+                        
+                    </li>
+                
+            
+        
+    
+        
+    
+        
+    
                             </ul>
                         <span class="is-size-5"></span>
                         </p>
@@ -598,7 +2449,62 @@
                                 </ul>
                             <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                                 <ul class="is-size-5">
-                                    {{ load_problems("meeting23") }}
+                                    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>None</li>
+                
+            
+        
+    
+        
+    
                                 </ul>
                             <span class="is-size-5"></span>
                             </p>
@@ -621,7 +2527,62 @@
                                 </ul>
                             <span class="is-size-5 is-monospace"><b>Lab Problems:</b></span>
                                 <ul class="is-size-5">
-                                    {{ load_problems("meeting24") }}
+                                    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                
+                    <li>None</li>
+                
+            
+        
+    
                                 </ul>
                             <span class="is-size-5"></span>
                             </p>
@@ -637,4 +2598,30 @@
         </div>
     </div>
 </section>
-{% endblock %}
+
+		</main>
+		<footer class="footer section">
+			<div class="content container is-size-5">
+				<hr/>
+				<p>
+					
+						<a href="/">home</a> | 
+					
+						<a href="/news">news</a> | 
+					
+						<a href="/calendar">calendar</a> | 
+					
+						<a href="/resources">resources</a> | 
+					
+						<a href="/recaps">meeting recaps</a> | 
+					
+						<a href="/about">about</a> 
+					
+				</p>
+				<p>51 University Blvd East, MD 20901<br/>
+					Mondays @ 11:25 AM | Room 328</p>
+			</div>
+		</footer>
+		<script type="text/javascript" src="element_control.js"></script>
+	</body>
+</html>
