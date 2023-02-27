@@ -42,7 +42,7 @@ if __name__ == "__main__":
     curriculum_context = {"meeting_problems":problems}
 
     # generate site files
-    site = Site.make_site(contexts=[("news.html",news_context),("curriculum.html",curriculum_context)],searchpath="templates",outpath="output")
+    site = Site.make_site(contexts=[("news.html",news_context),("curriculum.html",curriculum_context)],searchpath="templates",outpath="output",staticpaths="static")
 
     # enable automatic reloading
     site.render()
